@@ -1,1 +1,97 @@
- 
+"use client";
+
+import { useState, useEffect, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X } from "lucide-react";
+import { Button } from "../components/ui/button";
+
+export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+  const navMenuRef = useRef<HTMLDivElement>(null);
+
+  const handleToggle = () => setIsOpen(!isOpen);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (isOpen && window.innerWidth >= 768) {
+        setIsOpen(false);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [isOpen]);
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (isOpen && navMenuRef.current && !navMenuRef.current.contains(e.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [isOpen]);
+
+  console.log("isOpen:", isOpen);
+
+  return (
+    <nav className="flex items-center justify-between px-6 py-4 border-b-4 border-black bg-white fixed w-full top-0 left-0 z-50">
+      {/* Logo */}
+      <div className="font-bold text-2xl">Fabrizzio</div>
+
+      {/* Desktop Navigation */}
+      <div className="hidden md:flex space-x-8 text-lg font-medium">
+        <a href="#experiencia" className="hover:underline">Experiencia</a>
+        <a href="#proyectos" className="hover:underline">Proyectos</a>
+        <a href="#habilidades" className="hover:underline">Habilidades</a>
+        <a href="#contacto" className="hover:underline">Contacto</a>
+      </div>
+
+      {/* Desktop Buttons */}
+      <div className="hidden md:flex space-x-4">
+        <Button>LinkedIn</Button>
+        <Button>GitHub</Button>
+      </div>
+
+      {/* Mobile Menu Toggle */}
+      <div className="md:hidden ">
+        <button onClick={handleToggle}>
+          {isOpen ? <X size={32} strokeWidth={3} /> : <Menu size={32} strokeWidth={3} />}
+        </button>
+      </div>
+
+      {/* Mobile Sidebar */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            ref={navMenuRef}
+            initial={{ translateX: "100%" }}
+            animate={{ translateX: "0%" }}
+            exit={{ translateX: "100%" }}
+            transition={{ duration: 0.3, type: "tween", ease: "easeInOut" }}
+            className="fixed top-0 right-0 h-full w-64 bg-white border-l-4 border-black p-6 flex flex-col justify-between z-50"
+          >
+            <div>
+              <div className="flex justify-between items-center mb-8">
+                <span className="font-bold text-2xl">Fabrizzio</span>
+                <button onClick={() => setIsOpen(false)}>
+                  <X size={32} strokeWidth={3} />
+                </button>
+              </div>
+              <div className="flex flex-col space-y-6 text-lg font-medium">
+                <a href="#experiencia" onClick={() => setIsOpen(false)}>Experiencia</a>
+                <a href="#proyectos" onClick={() => setIsOpen(false)}>Proyectos</a>
+                <a href="#habilidades" onClick={() => setIsOpen(false)}>Habilidades</a>
+                <a href="#contacto" onClick={() => setIsOpen(false)}>Contacto</a>
+              </div>
+            </div>
+
+            <div className="flex flex-col space-y-4">
+              <Button>LinkedIn</Button>
+              <Button>GitHub</Button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </nav>
+  );
+}

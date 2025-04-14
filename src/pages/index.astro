@@ -2,8 +2,11 @@
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 
+import Navbar from '../components/Navbar.tsx';
+
 ---
 
 <Layout>
+    <Navbar client:load />
 	<Hero />
 </Layout>
