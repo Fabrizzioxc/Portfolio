@@ -34,29 +34,31 @@ export default function Navbar() {
   console.log("isOpen:", isOpen);
 
   return (
-    <nav className="flex items-center justify-between px-6 py-4 border-b-4 border-black bg-white fixed w-full top-0 left-0 z-50">
-      {/* Logo */}
-      <div className="font-bold text-2xl">Fabrizzio</div>
+    <nav className="fixed top-0 left-0 z-50 w-full border-b-4 border-black bg-white">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+        {/* Logo */}
+        <div className="font-bold text-2xl">Fabrizzio</div>
 
-      {/* Desktop Navigation */}
-      <div className="hidden md:flex space-x-8 text-lg font-medium">
-        <a href="#experiencia" className="hover:underline">Experiencia</a>
-        <a href="#proyectos" className="hover:underline">Proyectos</a>
-        <a href="#habilidades" className="hover:underline">Habilidades</a>
-        <a href="#contacto" className="hover:underline">Contacto</a>
-      </div>
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex space-x-8 text-lg font-medium">
+          <a href="#experiencia" className="hover:underline">Experiencia</a>
+          <a href="#proyectos" className="hover:underline">Proyectos</a>
+          <a href="#habilidades" className="hover:underline">Habilidades</a>
+          <a href="#contacto" className="hover:underline">Contacto</a>
+        </div>
 
-      {/* Desktop Buttons */}
-      <div className="hidden md:flex space-x-4">
-        <Button>LinkedIn</Button>
-        <Button>GitHub</Button>
-      </div>
+        {/* Desktop Buttons */}
+        <div className="hidden md:flex space-x-4">
+          <Button>LinkedIn</Button>
+          <Button>GitHub</Button>
+        </div>
 
-      {/* Mobile Menu Toggle */}
-      <div className="md:hidden ">
-        <button onClick={handleToggle}>
-          {isOpen ? <X size={32} strokeWidth={3} /> : <Menu size={32} strokeWidth={3} />}
-        </button>
+        {/* Mobile Menu Toggle */}
+        <div className="md:hidden ">
+          <button onClick={handleToggle}>
+            {isOpen ? <X size={32} strokeWidth={3} /> : <Menu size={32} strokeWidth={3} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Sidebar */}
