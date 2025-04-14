@@ -70,24 +70,25 @@ export default function Navbar() {
             animate={{ translateX: "0%" }}
             exit={{ translateX: "100%" }}
             transition={{ duration: 0.3, type: "tween", ease: "easeInOut" }}
-            className="fixed top-0 right-0 h-full w-64 bg-white border-l-4 border-black p-6 flex flex-col justify-between z-50"
+            className="fixed top-0 right-0 h-full w-64 bg-white border-l-4 border-black p-6 flex flex-col z-50"
           >
-            <div>
-              <div className="flex justify-between items-center mb-8">
-                <span className="font-bold text-2xl">Fabrizzio</span>
-                <button onClick={() => setIsOpen(false)}>
-                  <X size={32} strokeWidth={3} />
-                </button>
-              </div>
-              <div className="flex flex-col space-y-6 text-lg font-medium">
-                <a href="#experiencia" onClick={() => setIsOpen(false)}>Experiencia</a>
-                <a href="#proyectos" onClick={() => setIsOpen(false)}>Proyectos</a>
-                <a href="#habilidades" onClick={() => setIsOpen(false)}>Habilidades</a>
-                <a href="#contacto" onClick={() => setIsOpen(false)}>Contacto</a>
-              </div>
+            {/* Close Button */}
+            <div className="flex justify-end mb-4">
+              <button onClick={() => setIsOpen(false)} className="p-2">
+                <X size={32} strokeWidth={3} />
+              </button>
             </div>
 
-            <div className="flex flex-col space-y-4">
+            {/* Menu Links */}
+            <div className="flex flex-col space-y-6 text-lg font-medium">
+              <a href="#experiencia" onClick={() => setIsOpen(false)}>Experiencia</a>
+              <a href="#proyectos" onClick={() => setIsOpen(false)}>Proyectos</a>
+              <a href="#habilidades" onClick={() => setIsOpen(false)}>Habilidades</a>
+              <a href="#contacto" onClick={() => setIsOpen(false)}>Contacto</a>
+            </div>
+
+            {/* Buttons */}
+            <div className="flex flex-col space-y-4 mt-6">
               <Button>LinkedIn</Button>
               <Button>GitHub</Button>
             </div>
