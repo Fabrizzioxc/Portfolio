@@ -2,8 +2,11 @@
 
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, } from "lucide-react";
 import { Button } from "../components/ui/button";
+import GitHub from "../assets/icons/GitHub";
+import LinkedIn from "../assets/icons/LinkedIn";
+
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -49,8 +52,8 @@ export default function Navbar() {
 
         {/* Desktop Buttons */}
         <div className="hidden md:flex space-x-4">
-          <Button>LinkedIn</Button>
-          <Button>GitHub</Button>
+        <Button><LinkedIn className="w-6 h-6" /></Button>
+        <Button><GitHub className="w-6 h-6" /></Button>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -89,8 +92,8 @@ export default function Navbar() {
 
             {/* Buttons */}
             <div className="flex flex-col space-y-4 mt-6">
-              <Button>LinkedIn</Button>
-              <Button>GitHub</Button>
+            <Button><LinkedIn className="w-5 h-5" /></Button>
+            <Button><GitHub className="w-5 h-5" /></Button>
             </div>
           </motion.div>
         )}
