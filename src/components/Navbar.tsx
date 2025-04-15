@@ -52,8 +52,16 @@ export default function Navbar() {
 
         {/* Desktop Buttons */}
         <div className="hidden md:flex space-x-4">
-        <Button><LinkedIn className="w-6 h-6" /></Button>
-        <Button><GitHub className="w-6 h-6" /></Button>
+          <a href="https://www.linkedin.com/in/fabrizzio-zambrano-602678334/" target="_blank" rel="noopener noreferrer">
+            <Button>
+              <LinkedIn className="w-6 h-6" />
+            </Button>
+          </a>
+          <a href="https://github.com/Fabrizzioxc" target="_blank" rel="noopener noreferrer">
+            <Button>
+              <GitHub className="w-6 h-6" />
+            </Button>
+          </a>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -92,8 +100,16 @@ export default function Navbar() {
 
             {/* Buttons */}
             <div className="flex flex-col space-y-4 mt-6">
-            <Button><LinkedIn className="w-5 h-5" /></Button>
-            <Button><GitHub className="w-5 h-5" /></Button>
+              <a href="https://www.linkedin.com/in/fabrizzio-zambrano-602678334/" target="_blank" rel="noopener noreferrer">
+                <Button>
+                  <LinkedIn className="w-5 h-5" />
+                </Button>
+              </a>
+              <a href="https://github.com/Fabrizzioxc" target="_blank" rel="noopener noreferrer">
+                <Button>
+                  <GitHub className="w-5 h-5" />
+                </Button>
+              </a>
             </div>
           </motion.div>
         )}
