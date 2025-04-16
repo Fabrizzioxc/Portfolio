@@ -46,7 +46,6 @@ export default function Navbar() {
         <div className="hidden md:flex space-x-8 text-lg font-medium">
           <a href="#experiencia" className="hover:underline">Experiencia</a>
           <a href="#proyectos" className="hover:underline">Proyectos</a>
-          <a href="#habilidades" className="hover:underline">Habilidades</a>
           <a href="#contacto" className="hover:underline">Contacto</a>
         </div>
 
