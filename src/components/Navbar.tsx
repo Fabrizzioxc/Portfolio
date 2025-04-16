@@ -2,11 +2,10 @@
 
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "../components/ui/button";
 import GitHub from "./icons/GitHub";
 import LinkedIn from "./icons/LinkedIn";
-
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,19 +33,19 @@ export default function Navbar() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [isOpen]);
 
-  console.log("isOpen:", isOpen);
-
   return (
-    <nav className="fixed top-0 left-0 z-50 w-full border-b-4 border-black bg-white">
+    <nav className="fixed top-0 left-0 z-50 w-full  border-b-4 border-black bg-white">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         {/* Logo */}
-        <div className="font-bold text-2xl">Fabrizzio</div>
+        <a href="/" className="font-bold text-2xl hover:text-yellow-500 transition-colors">
+          Fabrizzio
+        </a>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8 text-lg font-medium">
-          <a href="#experiencia" className="hover:underline">Experiencia</a>
-          <a href="#proyectos" className="hover:underline">Proyectos</a>
-          <a href="#contacto" className="hover:underline">Contacto</a>
+          <a href="/Experience" className="hover:underline">Experiencia</a>
+          <a href="/Proyects" className="hover:underline">Proyectos</a>
+          <a href="/Contact" className="hover:underline">Contacto</a>
         </div>
 
         {/* Desktop Buttons */}
@@ -64,7 +63,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Menu Toggle */}
-        <div className="md:hidden ">
+        <div className="md:hidden">
           <button onClick={handleToggle}>
             {isOpen ? <X size={32} strokeWidth={3} /> : <Menu size={32} strokeWidth={3} />}
           </button>
@@ -91,10 +90,9 @@ export default function Navbar() {
 
             {/* Menu Links */}
             <div className="flex flex-col space-y-6 text-lg font-medium">
-              <a href="#experiencia" onClick={() => setIsOpen(false)}>Experiencia</a>
-              <a href="#proyectos" onClick={() => setIsOpen(false)}>Proyectos</a>
-              <a href="#habilidades" onClick={() => setIsOpen(false)}>Habilidades</a>
-              <a href="#contacto" onClick={() => setIsOpen(false)}>Contacto</a>
+              <a href="/Experience" onClick={() => setIsOpen(false)}>Experiencia</a>
+              <a href="/Proyects" onClick={() => setIsOpen(false)}>Proyectos</a>
+              <a href="/Contact" onClick={() => setIsOpen(false)}>Contacto</a>
             </div>
 
             {/* Buttons */}

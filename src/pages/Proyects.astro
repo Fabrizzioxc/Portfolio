@@ -1,0 +1,13 @@
+---
+// src/pages/experience.astro
+import Layout from '../layouts/Layout.astro';
+import ProyectsComponent from '@/components/ProyectsComponent.astro';
+import Footer from '../components/Footer.astro';
+import Navbar from '../components/Navbar.tsx';
+---
+
+<Layout>
+  <Navbar client:load />
+  <ProyectsComponent />
+  <Footer />
+</Layout>
