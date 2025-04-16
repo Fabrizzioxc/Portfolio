@@ -4,8 +4,8 @@ import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, } from "lucide-react";
 import { Button } from "../components/ui/button";
-import GitHub from "../assets/icons/GitHub";
-import LinkedIn from "../assets/icons/LinkedIn";
+import GitHub from "./icons/GitHub";
+import LinkedIn from "./icons/LinkedIn";
 
 
 export default function Navbar() {
