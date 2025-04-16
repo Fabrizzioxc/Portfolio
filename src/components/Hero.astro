@@ -15,7 +15,7 @@ import { Button } from '../components/ui/button.tsx';
 
       <div class="mt-7 mb-7 text-lg text-gray-700 border-l-4 border-black pl-4">
         <p>
-          Un Desarrollador de Software apasionado por la programación. Cuento con soluciones correctas en el sitio correcto.
+          un Desarrollador de Software, me apasiona integrar funcionalidad y diseño en aplicaciones para crear experiencias intuitivas y fáciles de usar.
         </p>
       </div>
 
@@ -24,11 +24,15 @@ import { Button } from '../components/ui/button.tsx';
           href="/public/curriculum.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-flex items-center justify-center whitespace-nowrap rounded-base text-sm font-base ring-offset-white transition-all gap-2 text-main-foreground bg-main border-2 border-border shadow-shadow hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none h-10 px-4 py-2"
+          class="h-14 px-8 text-xl inline-flex items-center justify-center whitespace-nowrap rounded-base text-sm font-base ring-offset-white transition-all gap-2 text-main-foreground bg-main border-2 border-border shadow-shadow hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none h-10 px-4 py-2"
         >
           Curriculum
         </a>
-        <Button onClick={() => window.location.href = '#'} variant="neutral">
+        <Button
+          onClick={() => window.location.href = '#'}
+          variant="neutral"
+          className="h-14 px-6 text-xl"
+        >
           Contáctame
         </Button>
       </div>
