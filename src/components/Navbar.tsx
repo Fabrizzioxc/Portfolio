@@ -50,17 +50,30 @@ export default function Navbar() {
 
         {/* Desktop Buttons */}
         <div className="hidden md:flex space-x-4">
-          <a href="https://www.linkedin.com/in/fabrizzio-zambrano-602678334/" target="_blank" rel="noopener noreferrer">
-            <Button>
-              <LinkedIn className="w-6 h-6" />
-            </Button>
-          </a>
-          <a href="https://github.com/Fabrizzioxc" target="_blank" rel="noopener noreferrer">
-            <Button>
-              <GitHub className="w-6 h-6" />
-            </Button>
-          </a>
-        </div>
+  <a
+    href="https://www.linkedin.com/in/fabrizzio-zambrano-602678334/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="LinkedIn de Fabrizzio"
+  >
+    <Button>
+      <LinkedIn className="w-6 h-6" />
+      <span className="sr-only">LinkedIn</span>
+    </Button>
+  </a>
+  <a
+    href="https://github.com/Fabrizzioxc"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="GitHub de Fabrizzio"
+  >
+    <Button>
+      <GitHub className="w-6 h-6" />
+      <span className="sr-only">GitHub</span>
+    </Button>
+  </a>
+</div>
+
 
         {/* Mobile Menu Toggle */}
         <div className="md:hidden">
@@ -113,4 +126,4 @@ export default function Navbar() {
       </AnimatePresence>
     </nav>
   );
-}
+}  

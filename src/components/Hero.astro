@@ -1,8 +1,11 @@
 ---
 import { Button } from '../components/ui/button.tsx';
+import CodeIcon from '@/components/icons/code.astro';
+import RecycleIcon from '@/components/icons/Recycle.astro';
+import SpeedIcon from '@/components/icons/speed.astro';
 ---
 
-<section class="bg-white border-b-4 border-black mt-16">
+<section class="bg-white  mt-16">
   <div class="mx-auto max-w-7xl px-6 flex flex-col md:flex-row items-center justify-between py-12">
     <!-- Text Content -->
     <div class="max-w-lg">
@@ -29,7 +32,7 @@ import { Button } from '../components/ui/button.tsx';
           Curriculum
         </a>
         <Button
-          onClick={() => window.location.href = '#'}
+          onClick={() => window.location.href = '/Contact'}
           variant="neutral"
           className="h-14 px-6 text-xl"
         >
@@ -45,5 +48,42 @@ import { Button } from '../components/ui/button.tsx';
       </div>
     </div>
   </div>
+
+  <!-- Cards como Botones -->
+<div class="mx-auto max-w-7xl px-6 grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+  <!-- Card Botón 1 -->
+  <button
+    class="w-full text-left inline-flex flex-col items-start justify-start gap-2 rounded-base text-sm font-base ring-offset-white transition-all shadow-shadow border-2 border-border text-main-foreground bg-main hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none p-6 h-auto"
+  >
+    <CodeIcon class="w-10 h-10 mb-2" />
+    <h3 class="text-2xl font-bold">Código Limpio</h3>
+    <p class="text-gray-800 mt-1">
+      Código estructurado, mantenible y basado en buenas prácticas.
+    </p>
+  </button>
+
+  <!-- Card Botón 2 -->
+  <button
+    class="w-full text-left inline-flex flex-col items-start justify-start gap-2 rounded-base text-sm font-base ring-offset-white transition-all shadow-shadow border-2 border-border text-main-foreground bg-main hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none p-6 h-auto"
+  >
+    <RecycleIcon class="w-10 h-10 mb-2" />
+    <h3 class="text-2xl font-bold">Componentes</h3>
+    <p class="text-gray-800 mt-1">
+      Arquitectura basada en componentes reutilizables.
+    </p>
+  </button>
+
+  <!-- Card Botón 3 -->
+  <button
+    class="w-full text-left inline-flex flex-col items-start justify-start gap-2 rounded-base text-sm font-base ring-offset-white transition-all shadow-shadow border-2 border-border text-main-foreground bg-main hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none p-6 h-auto"
+  >
+    <SpeedIcon class="w-10 h-10 mb-2" />
+    <h3 class="text-2xl font-bold">Velocidad</h3>
+    <p class="text-gray-800 mt-1">
+      Enfoque centrado en velocidad y optimización.
+    </p>
+  </button>
+</div>
+
 </section>
 
