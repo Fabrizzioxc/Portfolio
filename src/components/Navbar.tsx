@@ -6,6 +6,7 @@ import { Menu, X } from "lucide-react";
 import { Button } from "../components/ui/button";
 import GitHub from "./icons/GitHub";
 import LinkedIn from "./icons/LinkedIn";
+import DeveloperIcon from '@/components/icons/DeveloperIcon';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,15 +38,31 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 z-50 w-full  border-b-4 border-black bg-white">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         {/* Logo */}
-        <a href="/" className="font-bold text-2xl hover:text-yellow-500 transition-colors">
-          Fabrizzio
+        <a href="/" className="flex items-center font-bold text-2xl hover:text-yellow-500 transition-colors">
+        <DeveloperIcon className="w-6 h-6 mr-2" />
+        <span className="mr-2">Fabrizzio</span>
         </a>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8 text-lg font-medium">
-          <a href="/Experience" className="hover:underline">Experiencia</a>
-          <a href="/Proyects" className="hover:underline">Proyectos</a>
-          <a href="/Contact" className="hover:underline">Contacto</a>
+          <a
+            href="/Experience"
+            className=" hover:-translate-y-1 transition-transform"
+          >
+            Experiencia
+          </a>
+          <a
+            href="/Proyects"
+            className=" hover:-translate-y-1 transition-transform"
+          >
+            Proyectos
+          </a>
+          <a
+            href="/Contact"
+            className=" hover:-translate-y-1 transition-transform"
+          >
+            Contacto
+          </a>
         </div>
 
         {/* Desktop Buttons */}
@@ -126,4 +143,4 @@ export default function Navbar() {
       </AnimatePresence>
     </nav>
   );
-}  
+}
