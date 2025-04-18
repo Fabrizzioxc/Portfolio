@@ -22,7 +22,7 @@ export default function CopyEmailCard() {
 
   return (
     <div className="relative flex items-center">
-      <div className="absolute inset-0 translate-x-3 translate-y-3 bg-yellow-300 border-2 border-black"></div>
+      <div className="absolute inset-0 translate-x-3 translate-y-3 bg-yellow-300 border-2 border-black "></div>
       <div className="relative bg-white border-2 border-black w-120 p-6">
         <label htmlFor="email" className="block text-lg font-bold mb-2">Correo Electrónico</label>
         <div className="flex items-center gap-2">

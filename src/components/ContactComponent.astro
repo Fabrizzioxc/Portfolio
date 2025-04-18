@@ -8,10 +8,10 @@ import TimeIcon from '@/components/icons/TimeIcon.astro';
   <div class="mx-auto max-w-7xl px-6">
     <div class="text-center mb-10">
       <h2 class="text-5xl font-bold mb-10">
-        <span class="bg-yellow-300 px-3 border-2 border-black ">Contacto</span>
+        <span class="bg-yellow-300 px-3 border-2 border-black">Contacto</span>
       </h2>
       <p class="mt-4 text-xl text-gray-700">
-        Estoy disponible para colaboraciones, propuestas laborales o cualquier iniciativa relacionada con la programacion.
+        Estoy disponible para colaboraciones, propuestas laborales o cualquier iniciativa relacionada con la programación.
       </p>
     </div>
 
@@ -26,12 +26,18 @@ import TimeIcon from '@/components/icons/TimeIcon.astro';
           <span class="block">o escribirme por LinkedIn :)</span>
         </p>
         <div class="mt-8 space-y-4">
+          <!-- Icono Location con cuadro amarillo y borde negro -->
           <div class="flex items-center gap-2">
-            <LocationIcon class="w-6 h-6" />
+            <div class="flex items-center justify-center w-12 h-12 bg-[#FFDB33] border-2 border-black rounded-[5px]">
+              <LocationIcon class="w-6 h-6" />
+            </div>
             <span>Lima, Perú</span>
           </div>
-          <div class="flex items-center gap-2">
-            <TimeIcon class="w-6 h-6" />
+          <!-- Icono Time con cuadro amarillo y borde negro -->
+          <div class="flex items-center gap-2 mt-4">
+            <div class="flex items-center justify-center w-12 h-12 bg-[#FFDB33] border-2 border-black rounded-[5px] ">
+              <TimeIcon class="w-6 h-6" />
+            </div>
             <span>GMT -5</span>
           </div>
         </div>
@@ -40,3 +46,4 @@ import TimeIcon from '@/components/icons/TimeIcon.astro';
     </div>
   </div>
 </section>
+
