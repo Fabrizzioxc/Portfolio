@@ -1,13 +1,11 @@
 ---
-import { Button } from '@/components/ui/button.tsx';;
-import CopyIcon from '@/components/icons/CopyIcon.tsx';
+import CopyEmailCard from "@/components/CopyEmailCard";
 import LocationIcon from '@/components/icons/LocationIcon.astro';
 import TimeIcon from '@/components/icons/TimeIcon.astro';
 ---
 
-<section class="bg-[#f9f9f9] py-16 mt-16">
+<section class="bg-[#f9f9f9] py-45">
   <div class="mx-auto max-w-7xl px-6">
-    <!-- Título -->
     <div class="text-center mb-10">
       <h2 class="text-5xl font-bold mb-10">
         <span class="bg-yellow-300 px-3 border-2 border-black ">Contacto</span>
@@ -17,9 +15,7 @@ import TimeIcon from '@/components/icons/TimeIcon.astro';
       </p>
     </div>
 
-    <!-- Contenido principal -->
     <div class="bg-white border-2 border-black p-16 md:px-16 shadow-lg flex flex-col md:flex-row justify-between items-center">
-      <!-- Información -->
       <div>
         <h3 class="text-5xl font-bold">Disponible para</h3>
         <p class="text-5xl font-bold mt-2">
@@ -40,32 +36,7 @@ import TimeIcon from '@/components/icons/TimeIcon.astro';
           </div>
         </div>
       </div>
-      <!-- Formulario de correo -->
-      <div class="relative flex items-center ">
-        <!-- Cuadro amarillo como sombra detrás -->
-        <div class="absolute inset-0 translate-x-3 translate-y-3 bg-yellow-300 border-2 border-black "></div>
-
-        <!-- Cuadro blanco con el contenido -->
-        <div class="relative bg-white border-2 border-black w-120 p-6">
-          <label for="email" class="block text-lg font-bold mb-2">Correo Electrónico</label>
-          <div class="flex items-center gap-2">
-            <input
-              id="email"
-              type="text"
-              value="fabrizziozv.17@gmail.com"
-              readonly
-              class="flex-1 border-2 border-black p-2 text-gray-700"
-            />
-            <Button
-              variant="neutral"
-              className="flex items-center gap-2 px-4 py-2"
-            >
-              Copiar
-              <CopyIcon className="w-5 h-5" />
-            </Button>
-          </div>
-        </div>
-      </div>
+      <CopyEmailCard client:load />
     </div>
   </div>
 </section>
