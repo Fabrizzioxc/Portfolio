@@ -1,48 +1,37 @@
-# Astro Starter Kit: Basics
+# 🌐 Portafolio Personal - Fabrizzio Zambrano
 
-```sh
-npm create astro@latest -- --template basics
-```
+Este es mi portafolio personal desarrollado con [Astro](https://astro.build/), [React](https://reactjs.org/) y componentes UI de [neobrutalism.dev](https://neobrutalism.dev). Está diseñado como una **Single Page Application (SPA)** moderna y rápida, pensada para mostrar mi experiencia, proyectos y formas de contacto de manera clara y visualmente atractiva.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## 🚀 Tecnologías Utilizadas
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- ⚡️ [Astro](https://astro.build/) - Framework moderno para sitios web rápidos.
+- ⚛️ [React.js](https://reactjs.org/) - Para componentes interactivos y reutilizables.
+- 🎨 [Neobrutalism.dev](https://neobrutalism.dev/) - Estilo visual con enfoque minimalista y retro.
+- 💨 [Tailwind CSS](https://tailwindcss.com/) - Utilizado para el diseño responsive y utilitario.
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## 🧩 Estructura del Sitio
 
-## 🚀 Project Structure
+El sitio está organizado en una sola página, con navegación interna entre secciones:
 
-Inside of your Astro project, you'll see the following folders and files:
+- `Hero`: Presentación y llamado a la acción.
+- `Experiencia`: Trayectoria profesional y roles anteriores.
+- `Proyectos`: Muestras de trabajos realizados o en desarrollo.
+- `Contacto`: Información de contacto y enlaces sociales.
+- `Navbar` y `Footer`: Navegación fija y pie de página adaptativo.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## 📸 Vista Previa
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+![Preview](./public/preview.jpg) <!-- Puedes colocar una imagen de tu portafolio aquí -->
 
-## 🧞 Commands
+## 🛠 Instalación y desarrollo
 
-All commands are run from the root of the project, from a terminal:
+```bash
+# Clona este repositorio
+git clone https://github.com/Fabrizzioxc/portfolio.git
+cd portfolio
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+# Instala dependencias
+npm install
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+# Corre el proyecto en desarrollo
+npm run dev
