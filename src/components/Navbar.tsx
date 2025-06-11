@@ -38,7 +38,7 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 z-50 w-full  border-b-4 border-black bg-white">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         {/* Logo */}
-        <a href="/" className="flex items-center font-bold text-2xl hover:text-yellow-500 transition-colors">
+        <a href="#" className="flex items-center font-bold text-2xl hover:text-yellow-500 transition-colors">
         <DeveloperIcon className="w-6 h-6 mr-2" />
         <span className="mr-2">Fabrizzio</span>
         </a>
@@ -46,19 +46,19 @@ export default function Navbar() {
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8 text-lg font-medium">
           <a
-            href="/Experience"
+            href="#experience"
             className=" hover:-translate-y-1 transition-transform"
           >
             Experiencia
           </a>
           <a
-            href="/Proyects"
+            href="#proyectos"
             className=" hover:-translate-y-1 transition-transform"
           >
             Proyectos
           </a>
           <a
-            href="/Contact"
+            href="#contacto"
             className=" hover:-translate-y-1 transition-transform"
           >
             Contacto
@@ -120,9 +120,9 @@ export default function Navbar() {
 
             {/* Menu Links */}
             <div className="flex flex-col space-y-6 text-lg font-medium">
-              <a href="/Experience" onClick={() => setIsOpen(false)}>Experiencia</a>
-              <a href="/Proyects" onClick={() => setIsOpen(false)}>Proyectos</a>
-              <a href="/Contact" onClick={() => setIsOpen(false)}>Contacto</a>
+              <a href="#experience" onClick={() => setIsOpen(false)}>Experiencia</a>
+              <a href="#proyectos" onClick={() => setIsOpen(false)}>Proyectos</a>
+              <a href="#contacto" onClick={() => setIsOpen(false)}>Contacto</a>
             </div>
 
             {/* Buttons */}

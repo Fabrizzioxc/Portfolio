@@ -46,3 +46,8 @@
   --font-weight-base: 600;
   --font-weight-heading: 900;
 }
+
+
+html {
+  scroll-behavior: smooth;
+}

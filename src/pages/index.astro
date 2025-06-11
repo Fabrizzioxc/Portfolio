@@ -2,7 +2,9 @@
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import Footer from '@/components/Footer.astro';
-
+import Experience from './Experience.astro';
+import Proyects from './Proyects.astro';
+import Contact from './Contact.astro';
 import Navbar from '../components/Navbar.tsx';
 
 ---
@@ -10,5 +12,8 @@ import Navbar from '../components/Navbar.tsx';
 <Layout>  
     <Navbar client:load />
 	<Hero />
+    <Experience />
+    <Proyects />
+    <Contact />
     <Footer />
 </Layout>

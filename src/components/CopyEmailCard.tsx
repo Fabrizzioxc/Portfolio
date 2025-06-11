@@ -37,7 +37,7 @@ export default function CopyEmailCard() {
             onClick={handleCopy}
             className="flex items-center gap-2 bg-yellow-300 border-2 border-black px-4 py-2"
           >
-            <Copy className="w-4 h-4" />
+            <Copy className="w-4 h-4" strokeWidth={3}/>
             Copiar
           </Button>
         </div>
