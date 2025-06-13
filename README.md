@@ -21,7 +21,7 @@ El sitio está organizado en una sola página, con navegación interna entre sec
 
 ## 📸 Vista Previa
 
-![Preview](./public/preview.jpg) <!-- Puedes colocar una imagen de tu portafolio aquí -->
+![Preview](./public/shot.png) <!-- Puedes colocar una imagen de tu portafolio aquí -->
 
 ## 🛠 Instalación y desarrollo
 
